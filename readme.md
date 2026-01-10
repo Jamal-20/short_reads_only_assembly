@@ -1,17 +1,31 @@
-# Prompt
+#### Short-Read Genome Assembly Pipeline
+A production-ready workflow for Illumina paired-end data
 
-Act as a bioinformatician: please provide a script that performs the following tasks.
+## Overview
+This repository provides an end-to-end, reproducible pipeline that converts raw Illumina reads into a high-quality, annotated bacterial genome.
+All external dependencies are encapsulated in isolated Conda environments; no root privileges or manual compilation steps are required.
+- Illumina paired-end reads → quality trim → SPAdes assembly → CheckM2/QUAST/BUSCO QC → Prokka/Bakta annotation.
+- Hybrid assembly will follow in ch. 03; this chapter is the **baseline** to beat.
 
-1. Copy the short reads (.fastq.gz) from this path:
+<img width="1547" height="466" alt="short_read_assembly_map" src="https://github.com/user-attachments/assets/d2b6b55e-a6a3-4a57-a196-59111ca0d6fa" />
 
-   `/home/jamal/03_wgs_assembly/hybrid_genome_assembly_guide/01_raw_reads/short_reads`
-
-   into a new directory here called `00_raw_reads`.
-
-2. Create the following directories in the current project directory:
-
-   - `01_qc_before_processing`
-   - `02_process_reads`
-   - `03_qc_after_processing`
-
+## Pipeline Steps & Quick Start
+git clone https://github.com/YOUR_REPO/short-read-assembly.git
+cd short-read-assembly
+See `installation.sh` for an idempotent Bash script that implements these steps and usage instructions.
 See `analysis.sh` for an idempotent Bash script that implements these steps and usage instructions.
+
+## Repository Structure & Output
+
+| Directory                       | Key Files                                                                                 | Purpose                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------- |
+| `01_qc_before_processing/`      | `multiqc/`                                                                                | Pre-trimming quality                        |
+| `02_process_reads/`             | `*processed.fastq.gz`                                                                     | Cleaned reads                               |
+| `03_qc_after_processing/`       | `multiqc/`                                                                                | Post-trimming quality                       |
+| `04_short_reads_only_assembly/` | `spades_output/scaffolds.fasta`                                                           | Final assembly                              |
+| `05_genome_quality_assessment/` | `01_checkm2/quality_report.tsv`<br>`02_quast/report.html`<br>`04_busco/short_summary.txt` | Completeness, contiguity, lineage integrity |
+| `06_genome_annotation/`         | `01_prokka_annotation/` (GBK, FAA)<br>`02_bakta_annotation/` (GBF, TSV)                   | Functional & structural annotation          |
+| ------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------- |
+
+Citation
+FastQC, FastP, SPAdes, CheckM2, QUAST, BUSCO, Prokka, Bakta.
