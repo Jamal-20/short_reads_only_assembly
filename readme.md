@@ -10,7 +10,7 @@ All external dependencies are encapsulated in isolated Conda environments; no ro
 <img width="1547" height="466" alt="short_read_assembly_map" src="https://github.com/user-attachments/assets/d2b6b55e-a6a3-4a57-a196-59111ca0d6fa" />
 
 ## Pipeline Steps & Quick Start
-git clone https://github.com/YOUR_REPO/short-read-assembly.git
+git clone https://github.com/jamal-20/short_reads_only_assembly.git
 cd short-read-assembly
 See `installation.sh` for an idempotent Bash script that implements these steps and usage instructions.
 See `analysis.sh` for an idempotent Bash script that implements these steps and usage instructions.
