@@ -5,7 +5,8 @@ A production-ready workflow for Illumina paired-end data
 This repository provides an end-to-end, reproducible pipeline that converts raw Illumina reads into a high-quality, annotated bacterial genome.
 - Illumina paired-end reads → quality trim → SPAdes assembly → CheckM2/QUAST/BUSCO QC → Prokka/Bakta annotation.
 
-<img width="1547" height="466" alt="short_read_assembly_map" src="https://github.com/user-attachments/assets/d2b6b55e-a6a3-4a57-a196-59111ca0d6fa" />
+<img width="1512" height="416" alt="short_read_assembly_map" src="https://github.com/user-attachments/assets/463e77d9-20a2-4385-b109-288761b6457b" />
+
 
 ## Pipeline Steps & Quick Start
 git clone https://github.com/jamal-20/short_reads_only_assembly.git
