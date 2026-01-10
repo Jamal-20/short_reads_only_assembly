@@ -3,9 +3,7 @@ A production-ready workflow for Illumina paired-end data
 
 ## Overview
 This repository provides an end-to-end, reproducible pipeline that converts raw Illumina reads into a high-quality, annotated bacterial genome.
-All external dependencies are encapsulated in isolated Conda environments; no root privileges or manual compilation steps are required.
 - Illumina paired-end reads → quality trim → SPAdes assembly → CheckM2/QUAST/BUSCO QC → Prokka/Bakta annotation.
-- Hybrid assembly will follow in ch. 03; this chapter is the **baseline** to beat.
 
 <img width="1547" height="466" alt="short_read_assembly_map" src="https://github.com/user-attachments/assets/d2b6b55e-a6a3-4a57-a196-59111ca0d6fa" />
 
