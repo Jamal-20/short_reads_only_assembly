@@ -23,7 +23,6 @@ See `analysis.sh` for an idempotent Bash script that implements these steps and 
 | `04_short_reads_only_assembly/` | `spades_output/scaffolds.fasta`                                                           | Final assembly                              |
 | `05_genome_quality_assessment/` | `01_checkm2/quality_report.tsv`<br>`02_quast/report.html`<br>`04_busco/short_summary.txt` | Completeness, contiguity, lineage integrity |
 | `06_genome_annotation/`         | `01_prokka_annotation/` (GBK, FAA)<br>`02_bakta_annotation/` (GBF, TSV)                   | Functional & structural annotation          |
-| ------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------- |
 
-Citation
+## Citation
 FastQC, FastP, SPAdes, CheckM2, QUAST, BUSCO, Prokka, Bakta.
